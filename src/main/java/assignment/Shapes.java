@@ -1,4 +1,4 @@
-package ASSIGNMENT2;
+package assignment;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -39,12 +39,12 @@ class Triangle extends DIMENSIONS
     {
         calc=h*b;
         result2=((calc)/2.0);
-        LOGGER.info("Area of triangle :{}"+result2);
+        LOGGER.info("Area of triangle :{}",result2);
     }
     public void perimeter() {
 
         result1=(a+b+c);
-        LOGGER.info("Perimeter of triangle :{}"+(int)result1);
+        LOGGER.info("Perimeter of triangle :{}",(int)result1);
     }
 }
 class Rectangle extends DIMENSIONS
@@ -61,14 +61,14 @@ Rectangle()
 
     public void area() {
         result2=(l*w);
-        LOGGER.info("Area of the rectangle :{}"+(int)result2);
+        LOGGER.info("Area of the rectangle :{}",(int)result2);
 
     }
 
 
     public void perimeter() {
         result1=(2*(l*w));
-        LOGGER.info("Perimeter of the rectangle :{}"+(int)result1);
+        LOGGER.info("Perimeter of the rectangle :{}",(int)result1);
     }
 }
 class Circle extends DIMENSIONS
@@ -83,11 +83,11 @@ class Circle extends DIMENSIONS
     public void area()
     {
         result2=((3.1415)*(r*r));
-        LOGGER.info("Area of the circle:{}"+result2);
+        LOGGER.info("Area of the circle:{}",result2);
     }
     public void perimeter() {
         result1=((2*3.1415)*r);
-        LOGGER.info("circumference of the circle:{}"+result1);
+        LOGGER.info("circumference of the circle:{}",result1);
     }
 }
 public class Shapes {
