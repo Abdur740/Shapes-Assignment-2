@@ -16,24 +16,24 @@ abstract class DIMENSIONS
 
 class Triangle extends DIMENSIONS
 {
-    int h;
-    int b;
+    double h;
+    double b;
 
-    int a;
-    int c;
+    double a;
+    double c;
 
-    int calc;
+    double calc;
     Triangle()
     {
 
         LOGGER.info("Enter height:");
-        h=sc.nextInt();
+        h=sc.nextDouble();
         LOGGER.info("Enter base:");
-        b=sc.nextInt();
+        b=sc.nextDouble();
         LOGGER.info("Enter side1 length:");
-        a=sc.nextInt();
+        a=sc.nextDouble();
         LOGGER.info("Enter side2 length:");
-        c=sc.nextInt();
+        c=sc.nextDouble();
     }
     public void area()
     {
@@ -51,8 +51,8 @@ class Triangle extends DIMENSIONS
 }
 class Rectangle extends DIMENSIONS
 {
-    int l;
-    int w;
+    double l;
+    double w;
 Rectangle()
     {
         LOGGER.info("Enter length:");
@@ -77,11 +77,11 @@ Rectangle()
 }
 class Circle extends DIMENSIONS
 {
-    int r;
+    double r;
     Circle()
     {
         LOGGER.info("Enter radius of the circle:");
-        r=sc.nextInt();
+        r=sc.nextDouble();
     }
 
     public void area()
@@ -99,6 +99,7 @@ class Circle extends DIMENSIONS
 public class Shapes {
     private static final Logger LOGGER = Logger.getLogger("InfoLogging");
     public static void main(String[] args) {
+        try{
         int option;
         Scanner sc=new Scanner(System.in);
         do{
@@ -131,5 +132,10 @@ public class Shapes {
             break;
         }
         }while(option!=4);
+        }
+        catch(Exception e){
+            String print = ""+e;
+            LOGGER.info(print);
+        }
     }
 }
