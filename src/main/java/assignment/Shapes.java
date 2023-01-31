@@ -39,12 +39,14 @@ class Triangle extends DIMENSIONS
     {
         calc=h*b;
         result2=((calc)/2.0);
-        LOGGER.info("Area of triangle :{}",result2);
+        String print ="Area of triangle :"+result2;
+        LOGGER.info(print);
     }
     public void perimeter() {
 
         result1=(a+b+c);
-        LOGGER.info("Perimeter of triangle :{}",(int)result1);
+        String print ="Perimeter of triangle :"+result1;
+        LOGGER.info(print);
     }
 }
 class Rectangle extends DIMENSIONS
@@ -61,14 +63,16 @@ Rectangle()
 
     public void area() {
         result2=(l*w);
-        LOGGER.info("Area of the rectangle :{}",(int)result2);
+        String print ="Area of rectangle : "+result2;
+        LOGGER.info(print);
 
     }
 
 
     public void perimeter() {
         result1=(2*(l*w));
-        LOGGER.info("Perimeter of the rectangle :{}",(int)result1);
+        String print ="Perimeter of rectangle :"+result1;
+        LOGGER.info(print);
     }
 }
 class Circle extends DIMENSIONS
@@ -83,11 +87,13 @@ class Circle extends DIMENSIONS
     public void area()
     {
         result2=((3.1415)*(r*r));
-        LOGGER.info("Area of the circle:{}",result2);
+        String print ="Area of circle :"+result2;
+        LOGGER.info(print);
     }
     public void perimeter() {
         result1=((2*3.1415)*r);
-        LOGGER.info("circumference of the circle:{}",result1);
+        String print ="Perimeter of circle :"+result1;
+        LOGGER.info(print);
     }
 }
 public class Shapes {
@@ -96,7 +102,7 @@ public class Shapes {
         int option;
         Scanner sc=new Scanner(System.in);
         do{
-        LOGGER.info("Select any one of the shapes\n1. Triangle\n2. Rectangle\n3. Circle");   
+        LOGGER.info("Select any one of the shapes\n1. Triangle\n2. Rectangle\n3. Circle\n4. Exit");   
         option = sc.nextInt();
         switch(option){
             case 1:
